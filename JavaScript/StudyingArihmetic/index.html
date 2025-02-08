@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>משחק חשבון לילדים</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    
+        <div class="header">
+          <a href="/index.html" class="profile">
+            <img
+              src="/HTML/image/תמונה של WhatsApp‏ 2024-09-28 בשעה 09.25.38_077c4c48.jpg"
+              alt="תמונה שלי"
+              class="profile-img"
+            />
+            <span class="profile-name">אורטל נגוסה</span>
+          </a>
+        </div>
+
+
+    <div class="container">
+        <div id="title-h1">
+        <h1>משחק חשבון לילדים</h1>
+    </div>
+        <div class="game-box">
+            <h3 id="title1">פתרו את התרגיל:</h3>
+            <p id="problem">12 + 7 = ?</p>
+            <input type="number" id="answerInput" placeholder="כתבו את התשובה כאן">
+            <button id="checkButton">בדקו תשובה</button>
+            <p id="resultMessage"></p>
+            <p id="correctAnswers">תשובות נכונות: 0</p>
+            <p id="incorrectAnswers">תשובות שגויות: 0</p>
+            <p id="levelStatus">שלב 1</p>
+          </div>
+    </div>
+
+    <div class="modal" style="direction: rtl;">
+      <div class="modal-content">
+        <p class="modal-text"></p>
+        <button id="close">Close</button>
+      </div>
+    </div>
+
+
+
+
+    <script src="./index.js" defer></script>
+</body>
+</html>

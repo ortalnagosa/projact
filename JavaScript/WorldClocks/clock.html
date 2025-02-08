@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>world clock</title>
+    <link rel="stylesheet" href="./clock.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data.min.js"></script>
+  </head>
+  <body>
+    <div id="random-country">
+      <input
+        id="search-input"
+        type="text"
+        placeholder="חפש את המדינה שלך"
+        style="text-align: center"
+      />
+
+      <button id="search-button">חפש</button>
+    </div>
+
+    <div id="all-countries">
+      <div class="country israel">
+        <h3>ישראל</h3>
+        <h2 id="jerusalem"></h2>
+      </div>
+      <div class="country ethiopia">
+        <h3>אתיופיה</h3>
+        <h2 id="addis_ababa"></h2>
+      </div>
+      <div class="country brazil">
+        <h3>ברזיל</h3>
+        <h2 id="brasilia"></h2>
+      </div>
+      <div class="country jamaica">
+        <h3>ג'מייקה</h3>
+        <h2 id="kingston"></h2>
+      </div>
+    </div>
+
+    <div id="search-result"></div>
+
+    <script src="./scripts/clock.js"></script>
+    <script src="./scripts/search.js" type="module" defer></script>
+  </body>
+</html>

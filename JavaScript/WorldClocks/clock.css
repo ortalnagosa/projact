@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#random-country{
+    position: absolute;
+    z-index: 100;
+    top: 1%;
+    left: 27%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 15px;
+
+    input{
+        height: 60px;
+        width: 650px;
+        border-radius: 40px;
+        background-color: rgba(12, 12, 12, 0.763);
+        border: 4px solid rgb(23, 14, 14);
+        font-size: 25px;
+        color: white;
+        font-weight: bold;
+        display: flex;
+       
+    }
+
+    button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 60px;
+        border-radius: 40px;
+        font-weight: bold;
+        font-size: 20px;
+
+    }
+
+}
+
+#all-countries {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #f0f0f0;
+    gap: 3px;
+}
+
+.country {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 5px 6px 300px ;
+    width: 100vh;
+    height: 100vh;
+
+}
+
+.israel {
+    background-image: url('/JavaScript/imag/תמונה\ של\ WhatsApp‏\ 2025-02-08\ בשעה\ 14.11.34_b3d918aa.jpg '); 
+    background-size: cover; 
+    background-position: center;
+    opacity: 0.7;  
+}
+
+.ethiopia {
+    background-image: url('/JavaScript/imag/ethiopia\ kids.jpg'); 
+    background-size: cover ; 
+    background-position: center; 
+    opacity: 0.7;  
+}
+
+.brazil {
+    background-image: url('/JavaScript/imag/etinia-paresi-fonte-governo-do-mato-grosso-brazil.jpeg'); 
+    background-size: cover; 
+    background-position: center;
+    opacity: 0.7;  
+}
+
+.jamaica {
+    background-image: url('/JavaScript/imag/istockphoto-926200302-612x612.jpg');
+    background-size: cover; 
+    background-position: center; 
+    opacity: 0.7; 
+}
+
+
+
+
+
+h3 {
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 3px black, -2px -2px 3px black, 2px -2px 3px black, -2px 2px 3px black;
+
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+    text-shadow: 2px 2px 1px black, -2px -2px 1px black, 2px -2px 1px black, -2px 2px 1px black;
+
+}
+body{
+    position: relative;
+}
+.newCountry{
+    position: absolute;
+    top: 170px;
+    left: 430px;
+    height: 500px;
+    width: 800px;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    background-color: rgba(12, 12, 12, 0.763);
+
+    h3{
+        font-size: 160px;
+    }
+    img{
+        height: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    #all-countries {
+        height: 100vh;
+    }
+
+    .country {
+        width: 250px;  
+        height: 200px;
+    }
+    #random-contry{
+        height: 120px;
+        input{
+            width: 85%;
+        }
+    }
+
+}

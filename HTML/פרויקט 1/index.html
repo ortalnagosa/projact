@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project-1</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            background: transparent linear-gradient(180deg, #281EFF 0%, #2DFF8C 100%) 0% 0% no-repeat padding-box;
+            width: 100%;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            position: absolute;
+            top: 2px;
+            left: 5%;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .header:hover {
+            transform: scale(1.1);
+        }
+
+        .profile {
+            text-decoration: none;
+            color: black;
+        }
+
+        .profile-img {
+            width: 60px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 20px 30px 50px white;
+
+        }
+
+        .profile-name {
+            display: block;
+            margin-top: 5px;
+            font-size: 18px;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+
+
+        }
+
+        .container-title {
+            font: normal normal normal 120px/231px Satisfy;
+            color: #FFFFFF;
+            text-shadow: 0px 0px 36px #00000087;
+            opacity: 1;
+            text-align: center;
+            margin-top: -40px;
+
+
+        }
+
+        .container>h2 {
+            font: normal normal normal 32px/38px Varela Round;
+            color: #FFFFFF;
+            opacity: 1;
+            width: 529px;
+            height: 38px;
+            font-size: 25px;
+            margin-top: -30px;
+
+        }
+
+        .container>p {
+            text-align: center;
+            font: normal normal normal 16px/20px Varela Round;
+            color: #F9F9F9;
+            opacity: 1;
+            margin-bottom: 30px;
+            font-size: 13px;
+
+        }
+
+        .container-form {
+
+            direction: rtl;
+        }
+
+
+
+
+        .form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 25px;
+        }
+
+        .form-control {
+            display: flex;
+            flex-direction: column;
+            margin-right: 15px;
+        }
+
+        .form-control>label {
+            text-align: right;
+            margin-bottom: 5px;
+            width: 24px;
+            height: 20px;
+            text-align: center;
+            font: normal normal normal 16px/20px Varela Round;
+            letter-spacing: 0px;
+            color: #F9F9F9;
+            opacity: 1;
+            font-size: 13px;
+
+        }
+
+        .form-control>input {
+            width: 348px;
+            height: 30px;
+            background: #F6F6F624 0% 0% no-repeat padding-box;
+            border: 2px solid #FFFFFF;
+            opacity: 1;
+
+
+        }
+
+        button {
+            width: 170px;
+            height: 30px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            opacity: 1;
+            margin: 25px 10px 0 0;
+            text-align: center;
+            font: normal normal normal 16px/20px Varela Round;
+            letter-spacing: 0px;
+            color: #1C1C1C;
+            opacity: 1;
+            border: none;
+            font-size: 13px;
+        }
+
+
+
+        @media (max-width: 780px) {
+            .container {
+                width: 100vw;
+                text-align: center;
+                gap: 20px;
+            }
+
+
+
+            .container-title {
+                font: normal normal normal 60px/86px Satisfy;
+                color: #FFFFFF;
+                text-shadow: 0px 0px 36px #00000087;
+                opacity: 1;
+                font-size: 120px;
+                margin-bottom: 70px;
+
+            }
+
+            .container>h2 {
+                width: 100%;
+                font: normal normal normal 18px/22px Varela Round;
+                color: #FFFFFF;
+                opacity: 1;
+                margin-bottom: -30px;
+                font-size: 30px;
+
+            }
+
+            .container>p {
+                text-align: center;
+                font: normal normal normal 16px/20px Varela Round;
+                letter-spacing: 0px;
+                color: #F9F9F9;
+                opacity: 1;
+                font-size: 20px;
+                width: 70%;
+            }
+
+            .form {
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                margin-right: 30px;
+
+            }
+
+            .form-control {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            .form-control>label {
+                text-align: right;
+                margin-bottom: -5px;
+                font: normal normal normal 11px/13px Varela Round;
+                color: #F9F9F9;
+                opacity: 1;
+
+            }
+
+            .form-control>input {
+                height: 40px;
+                width: 500px;
+                background: #F6F6F624 0% 0% no-repeat padding-box;
+                border: 2px solid #FFFFFF;
+                opacity: 1;
+
+
+
+            }
+
+            button {
+                height: 40px;
+                width: 91%;
+                margin-left: 40px;
+                margin-top: -1px;
+                text-align: center;
+                font: normal normal normal 11px/13px Varela Round;
+                letter-spacing: 0px;
+                color: #2823FD;
+                opacity: 1;
+
+            }
+
+            button:hover {
+                border: 2px solid #2823FD;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <a href="/index.html" class="profile">
+            <img src="../image/תמונה של WhatsApp‏ 2024-09-28 בשעה 09.25.38_077c4c48.jpg" alt="תמונה שלי"
+                class="profile-img">
+            <span class="profile-name">אורטל נגוסה</span>
+        </a>
+    </div>
+
+
+
+    <div class="container">
+        <h1 class="container-title">Here & Now</h1>
+        <h2>רצינו להזמין אתכם להנות משלל מתנות</h2><br>
+        <p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לפרומי בלוף קינץ תתיח לרעח. לת צשחמי צש בליא, מנסוטו צמלח
+            לביקו ננבי, צמוקו בלוקריה.</p>
+
+
+        <div class="container-form">
+
+            <form class="form" action="">
+
+                <div class="form-control">
+
+                    <label for="name">שם</label>
+                    <input type="text" id="name" required>
+
+                </div>
+
+                <div class="form-control">
+
+                    <label for="email">דוא"ל</label>
+                    <input type="email" id="email" required>
+
+                </div>
+                <button type="submit">עדכנו אותי</button>
+
+
+
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

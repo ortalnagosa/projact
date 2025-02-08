@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Heebo:wght@100..900&display=swap"
+        rel="stylesheet">
+    <title>project-4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header{
+    position: absolute;
+    top: 4%;
+    left: 90%;
+   align-items: center;
+    margin: 10px 0;
+}
+
+.header:hover{
+    transform: scale(1.1);
+}
+.profile{
+    text-decoration: none;
+    color: black;
+}
+
+
+.profile-img{
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 10px 10px 30px white;
+
+}
+.profile-name{
+    display: block;
+    margin-top: 5px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+
+
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        .destop {
+            width: 100%;
+            height: 60%;
+        }
+
+        .mobail {
+            display: none;
+        }
+
+
+        .container-form {
+            background: #1A1A1AD4 0% 0% no-repeat padding-box;
+            opacity: 1;
+            position: absolute;
+            padding: 55px;
+            top: 107px;
+            left: 830px;
+            width: 429px;
+            height: 490px;
+            direction: rtl;
+        }
+
+        h2 {
+            text-align: right;
+            font: normal normal 900 36px/53px Heebo;
+            color: #FFFFFF;
+            opacity: 1;
+            font-size: 27px;
+        }
+
+        p {
+            text-align: right;
+            font: normal normal normal 20px/29px Heebo;
+            color: #F9F9F9;
+            opacity: 1;
+            font-size: 15px;
+            width: 313px;
+            height: 50px;
+        }
+
+        .form {
+            width: 60%;
+            padding-top: 25px;
+        }
+
+        .form-control {
+            margin-top: 7px;
+        }
+
+        label {
+            text-align: right;
+            font: normal normal bold 16px/24px Heebo;
+            color: #FFFFFF;
+            opacity: 1;
+            font-size: 12px;
+        }
+
+        input {
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #D31C75;
+            opacity: 1;
+            width: 280px;
+            height: 30px;
+
+        }
+
+        button {
+            background: #D31C75 0% 0% no-repeat padding-box;
+            opacity: 1;
+            font: normal normal bold 22px/30px Heebo;
+            letter-spacing: 0.33px;
+            color: #FFFFFF;
+            opacity: 1;
+            width: 90px;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        @media (max-width:780px) {
+            .container {
+                position: relative;
+            }
+
+            .destop {
+                display: none;
+
+            }
+
+            .mobail {
+                display: block;
+                width: 100%;
+                height: 55vh;
+            }
+
+            .container-form {
+                position: absolute;
+                top: -20%;
+                left: -30%;
+                transform: translate(50%, 50%);
+                width: 80%;
+                height: 85%;
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+   
+
+    <div class="container">
+
+        <div class="header">
+            <a href="/index.html" class="profile">
+                <img src="../image/תמונה של WhatsApp‏ 2024-09-28 בשעה 09.25.38_077c4c48.jpg" alt="תמונה שלי"
+                    class="profile-img">
+                <span class="profile-name">אורטל נגוסה</span>
+            </a>
+        </div>
+
+        <img class="destop" src="../image/Path 1511.png" alt="image">
+        <img class="mobail" src="../image/Path 15555.png" alt="image">
+
+
+
+        <div class="container-form">
+            <h2>תן לנו להוביל אותך קדימה</h2>
+            <p>לורם איפסום או בקיצור ליפסום, הוא מלל מקובל וחסר משמעות המשמש “ממלא מקום” בעת עריכ</p>
+
+            <form action="" class="form">
+
+
+                <div class="form-control">
+                    <label for="name">שם מלא</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-control">
+                    <label for="email">דוא"ל</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <button type="submit">שליחה</button>
+
+            </form>
+
+
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+$primary-color: #e8ac58;
+$secondary-color: #40825c;
+$background-light: #f4f4f4;
+$border-color: #ddd;
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $background-light;
+}
+
+.browser {
+  display: flex;
+  width: 95%;
+  max-width: 1650px;
+  height: 650px;
+  border: 1px solid $border-color;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+
+  .display-area {
+    flex-grow: 1;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    #preview-area {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $background-light;
+      overflow: auto;
+
+      .placeholder {
+        color: #888;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .settings-panel {
+    width: 200px;
+    background-color: $primary-color;
+    color: rgba(255, 255, 255, 0.733);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 3px;
+
+    h3 {
+      margin: 0;
+      text-align: center;
+    }
+
+    .setting {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      label {
+        font-size: 14px;
+      }
+
+      input[type="color"] {
+        width: 100%;
+        height: 40px;
+        border: none;
+        cursor: pointer;
+        border-radius: 3px;
+      }
+
+      input[type="text"] {
+        padding: 5px;
+        font-size: 14px;
+        border: none;
+        border-radius: 3px;
+      }
+
+      input[type="number"] {
+        width: 100%;
+        padding: 5px;
+        font-size: 14px;
+        border: none;
+        border-radius: 3px;
+      }
+
+      button {
+        padding: 8px 10px;
+        background-color: $secondary-color;
+        border: none;
+        color: white;
+        cursor: pointer;
+        border-radius: 3px;
+
+        &:hover {
+          background-color: darken($secondary-color, 10%);
+        }
+      }
+    }
+
+    .reset {
+      align-self: center;
+      padding: 10px 20px;
+      background-color: rgb(151, 46, 46);
+      border-radius: 3px;
+
+      &:hover {
+        background-color: darken(rgb(151, 46, 46), 10%);
+      }
+    }
+  }
+}
