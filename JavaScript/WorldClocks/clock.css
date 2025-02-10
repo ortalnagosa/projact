@@ -137,19 +137,57 @@ body{
 }
 
 @media (max-width: 768px) {
+    
+#random-country{
+    position: absolute;
+    z-index: 100;
+    top: -7%;
+    left: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 10px;
+
+    input{
+        height: 60px;
+        width: 340px;
+        border-radius: 40px;
+        background-color: rgba(12, 12, 12, 0.763);
+        border: 4px solid rgb(23, 14, 14);
+        font-size: 25px;
+        color: white;
+        font-weight: bold;
+        display: flex;
+       
+    }
+
+    button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 40px;
+        border-radius: 40px;
+        font-weight: bold;
+        font-size: 20px;
+
+    }
+
+}
+
+
     #all-countries {
-        height: 100vh;
+       display: flex;
+       flex-direction: column;
+       max-width: 100%;
+       margin-top: 80px;
     }
 
     .country {
-        width: 250px;  
-        height: 200px;
+        width: 100%;  
+        height: 400px;
     }
-    #random-contry{
-        height: 120px;
-        input{
-            width: 85%;
-        }
-    }
+   
 
 }
