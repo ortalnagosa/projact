@@ -8,19 +8,13 @@
   </head>
   <body>
     <div class="browser">
-      <div class="display-area">
-        <div id="preview-area">
-          <p class="placeholder">Your design will appear here...</p>
-        </div>
-      </div>
-
       <div class="settings-panel">
         <h3>Settings</h3>
+
         <div class="setting">
           <label for="bg-color">Background Color:</label>
           <input type="color" id="bg-color" />
-        </div>
-        <div class="setting">
+
           <label for="text-input">Add Text:</label>
           <textarea
             id="text-input"
@@ -28,10 +22,14 @@
             rows="5"
             cols="30"
           ></textarea>
+        </div>
+        <div class="setting">
           <label for="text-color">Text Color:</label>
           <input type="color" id="text-color" />
           <label for="text-size">Text Size (px):</label>
           <input type="number" id="text-size" min="8" max="72" />
+        </div>
+          <div class="setting">
           <label for="font-family">Font Family:</label>
           <select id="font-family">
             <option value="Arial">Arial</option>
@@ -39,11 +37,18 @@
             <option value="Courier New">Courier New</option>
             <option value="Verdana">Verdana</option>
           </select>
-
-
+       
+          
           <button id="add-text-btn">Add Text</button>
         </div>
+
         <button id="reset-btn" class="reset">Reset</button>
+
+      </div>
+      <div class="display-area">
+        <div id="preview-area">
+          <p class="placeholder">Your design will appear here...</p>
+        </div>
       </div>
     </div>
 

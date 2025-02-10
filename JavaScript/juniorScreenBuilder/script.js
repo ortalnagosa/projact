@@ -50,6 +50,7 @@ fontFamilyInput.addEventListener("change", () => {
 // כפתור איפוס
 resetBtn.addEventListener("click", () => {
   previewArea.innerHTML = ""; // איפוס כל הטקסטים
+  previewArea.style.backgroundColor ="";
   checkAndRestorePlaceholder(); // החזרת הודעת ברירת מחדל
 });
 

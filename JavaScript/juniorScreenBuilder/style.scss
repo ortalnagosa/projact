@@ -3,6 +3,12 @@ $secondary-color: #40825c;
 $background-light: #f4f4f4;
 $border-color: #ddd;
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -47,7 +53,8 @@ body {
   }
 
   .settings-panel {
-    width: 200px;
+    width: 230px;
+    height: 650px;
     background-color: $primary-color;
     color: rgba(255, 255, 255, 0.733);
     padding: 30px;
@@ -70,21 +77,8 @@ body {
         font-size: 14px;
       }
 
-      input[type="color"] {
-        width: 100%;
-        height: 40px;
-        border: none;
-        cursor: pointer;
-        border-radius: 3px;
-      }
-
-      input[type="text"] {
-        padding: 5px;
-        font-size: 14px;
-        border: none;
-        border-radius: 3px;
-      }
-
+      input[type="color"],
+      input[type="text"],
       input[type="number"] {
         width: 100%;
         padding: 5px;
@@ -115,6 +109,107 @@ body {
 
       &:hover {
         background-color: darken(rgb(151, 46, 46), 10%);
+      }
+    }
+  }
+}
+
+/* התאמה למובייל */
+@media (max-width: 768px) {
+  body {
+    display: block;
+    height: 100vh;
+    width: 104%;
+  }
+  
+  .browser {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+  
+    .display-area {
+      flex-grow: 1;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+  
+      #preview-area {
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $background-light;
+        overflow: auto;
+  
+        .placeholder {
+          color: #888;
+          font-size: 20px;
+        }
+      }
+    }
+  
+    .settings-panel {
+      position: absolute;
+      z-index: 1;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 220px;
+      padding: 0;
+      border-radius: 3px;
+      
+      
+      
+      .setting {
+        display: flex;
+        flex-direction: row;
+        margin: 5px;
+  
+        label {
+          font-size: 10px;
+        
+        }
+  
+        input[type="color"],
+        input[type="text"],
+        input[type="number"] {
+          width: 30%;
+          padding: 2px;
+          font-size: 14px;
+       
+        }
+  
+        #text-input{
+          width: 250px;
+          height: 42px;
+        }
+        button {
+          padding: 8px 10px;
+          background-color: $secondary-color;
+          border: none;
+          color: white;
+          cursor: pointer;
+          border-radius: 3px;
+  
+          &:hover {
+            background-color: darken($secondary-color, 10%);
+          }
+        }
+      }
+  
+      .reset {
+        align-self: center;
+        padding: 10px 20px;
+        background-color: rgb(151, 46, 46);
+        border-radius: 3px;
+  
+        &:hover {
+          background-color: darken(rgb(151, 46, 46), 10%);
+        }
       }
     }
   }

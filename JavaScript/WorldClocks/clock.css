@@ -4,6 +4,36 @@
     box-sizing: border-box;
 }
 
+.header {
+    position: absolute;
+    top: 6px;
+    left: 3%;
+    text-align: center;
+    margin: 10px 0;
+    z-index: 100;
+  }
+  
+  .header:hover {
+    transform: scale(1.1);
+  }
+  .profile {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .profile-img {
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 2px 30px 50px white;
+  }
+  .profile-name {
+    display: block;
+    margin-top: 5px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
 #random-country{
     position: absolute;
     z-index: 100;
@@ -137,6 +167,26 @@ body{
 }
 
 @media (max-width: 768px) {
+
+    .header {
+        position: absolute;
+        top: -85px;
+        left: 80%;
+        text-align: center;
+        margin: 10px 0;
+        z-index: 100;
+      }
+      .header:hover {
+        box-shadow: 20px 20px 50px white;
+      }
+
+      .profile-img {
+        width: 55px;
+      }
+      .profile-name {
+        font-size: 16px;
+        color: black;
+      }
     
 #random-country{
     position: absolute;
@@ -151,7 +201,7 @@ body{
 
     input{
         height: 60px;
-        width: 340px;
+        width: 250px;
         border-radius: 40px;
         background-color: rgba(12, 12, 12, 0.763);
         border: 4px solid rgb(23, 14, 14);

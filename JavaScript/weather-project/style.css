@@ -10,6 +10,34 @@ body {
   background-blend-mode: multiply;
   background-size: cover;
 }
+.header {
+  position: absolute;
+  top: 20px;
+  left: 5%;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.header:hover {
+  transform: scale(1.1);
+}
+.profile {
+  text-decoration: none;
+  color: white;
+}
+
+.profile-img {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 2px 30px 50px white;
+}
+.profile-name {
+  display: block;
+  margin-top: 5px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 .container {
   height: 400px;
