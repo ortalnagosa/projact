@@ -6,7 +6,7 @@ body {
   background: linear-gradient(to bottom, #a8e6cf, #dcedc1);
   text-align: center;
   color: #333;
-  background-image: url("./תמונות-נושא-15.jpg");
+  background-image: url("/JavaScript/imag/תמונות-נושא-15.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -71,24 +71,6 @@ body {
 
 }
 
-.container::before,
-.container::after {
-  width: 100px;
-  height: 100px;
-  background: url("./balloon.png") no-repeat center/contain;
-  opacity: 0.6;
-
-}
-
-.container::before {
-  top: 10px;
-  left: 10px;
-}
-
-.container::after {
-  bottom: 20px;
-  right: 20px;
-}
 
 h1 {
   color: white;
@@ -193,12 +175,18 @@ p {
 }
 
 @media (max-width: 768px) {
+  body {
+    background-image: url("/JavaScript/imag/תמונות-נושא-15.jpg");
+    height: 100vh;
+  }
   h1 {
     font-size: 2.5rem;
   }
 
+
   .game-box {
-    max-width: 300px;
+    max-width: 350px;
+    height: 400px;
   }
 
   h3 {
@@ -217,10 +205,15 @@ p {
 }
 
 @media (max-width: 480px) {
+  body {
+    background-image: url("/JavaScript/imag/תמונות-נושא-15.jpg");
+    height: 100vh;
+  }
   h1 {
     font-size: 2rem;
   }
 
+ 
   .game-box {
     max-width: 250px;
     padding: 15px;
