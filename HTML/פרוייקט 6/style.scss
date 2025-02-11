@@ -123,10 +123,13 @@ body {
     .container{
         flex-direction: column;
         justify-content: center;
+        
+     
 
     }
     .hero-image{
-        max-width: 50%;
+       height: 300px !important;
+       width: 300px;
         margin-right: 20px;
     }
 }

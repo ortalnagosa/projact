@@ -1,72 +1,60 @@
-const getCountries = async () => {
-    try {
-        const res = await fetch('https://restcountries.com/v3.1/all');
-        return await res.json();
-    } catch (error) {
-        console.error('Failed to fetch countries', error);
-    }
-};
-
-const countriesFull = await getCountries();
-
-const search = () => {
+const searchCity = async () => {
     const searchInput = document.getElementById('search-input');
-    const word = searchInput.value.trim().toLowerCase(); 
-    
-    if (!word) { 
-        alert("נא להזין שם מדינה");
+    const cityName = searchInput.value.trim(); // קבלת שם העיר מהמשתמש
+
+    if (!cityName) { 
+        alert("נא להזין שם עיר");
         return;
-    } 
-    const country = countriesFull.find(country => {
-        const countryName = country.name.common.toLowerCase();
-        return countryName.includes(word);
-    });
-    
-    if (country) {
-        displayCountry(country);
-    } else {
-        alert("מדינה לא נמצאה");
     }
-};
 
-document.getElementById('search-button').addEventListener('click', search);
+    try {
+        // חיפוש עיר ב-Nominatim API
+        const response = await fetch(`https://nominatim.openstreetmap.org/search?city=${cityName}&format=json`);
+        const data = await response.json();
 
-const displayCountry = async (country) => {
-    if (!country) return;
-
-    let countryContainer = document.getElementById('search-result');
-    
-    countryContainer.innerHTML = `
-        <div class="newCountry">
-            <h3>${country.name.common}</h3>
-            <img src="${country.flags.png}" alt="Flag of ${country.name.common}" width="300">
-            <h2 id="searched-time"></h2>
-        </div>
-    `;    
-
-    const countryTimeZone = country.timezones[0]; // לוקחים את אזור הזמן הראשון של המדינה
-    const normalizedTimeZone = normalizeTimeZone(countryTimeZone);
-    updateCountryTime(normalizedTimeZone);
-};
-
-// פונקציה הממירה אזור זמן ב-UTC לפורמט תקני
-const normalizeTimeZone = (timeZone) => {
-    if (timeZone.startsWith("UTC")) {
-        const offset = timeZone.split("UTC")[1]; // לדוגמה: "-05:00"
-        const sign = offset.startsWith("-") ? "minus" : "plus";
-        const absOffset = offset.replace(":", "");
-
-        // דוגמאות להתאמות אזורי זמן
-        if (sign === "minus" && absOffset === "0500") {
-            return "America/New_York"; // UTC-05:00 → America/New_York
-        } else if (sign === "plus" && absOffset === "0100") {
-            return "Europe/Paris"; // UTC+01:00 → Europe/Paris
+        if (data.length === 0) {
+            alert("עיר לא נמצאה");
+            return;
         }
-        // יש להוסיף התאמות נוספות לפי הצורך
 
-        return timeZone; // אם לא נמצאה התאמה, מחזירים את ה-UTC המקורי
+        // חיפוש התוצאה המתאימה ביותר (עיר ולא אזור קטן)
+        let bestMatch = data.find(item => item.type === "city" || item.type === "town") || data[0];
+
+        // שליפת קואורדינטות של העיר
+        const { lat, lon, display_name } = bestMatch;
+
+        // בקשה לשירות זיהוי אזור הזמן לפי קואורדינטות
+        const timezoneRes = await fetch(`https://api.timezonedb.com/v2.1/get-time-zone?key=TF3ISO4TNVPA&format=json&by=position&lat=${lat}&lng=${lon}`);
+        const timezoneData = await timezoneRes.json();
+        const cityTimeZone = timezoneData.zoneName; // שם אזור הזמן
+
+        displayCityTime(display_name, cityTimeZone);
+    } catch (error) {
+        console.error('שגיאה בחיפוש העיר:', error);
+        alert("שגיאה בעת חיפוש העיר");
     }
-    return timeZone; // אם לא מדובר ב-UTC, מחזירים את אזור הזמן המקורי
 };
 
-          
+// פונקציה שמציגה את שם העיר והשעה שלה
+const displayCityTime = (cityName, timeZone) => {
+    const cityContainer = document.getElementById('search-result');
+
+    // חישוב השעה לפי אזור הזמן
+    const time = new Intl.DateTimeFormat('he-IL', {
+        timeZone,
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    }).format(new Date());
+
+    // הצגת הנתונים בחלון
+    cityContainer.innerHTML = `
+        <div class="newCountry">
+            <h3>${cityName.split(',')[0]}</h3> <!-- מציג רק את שם העיר בלי מידע נוסף -->
+            <h2>${time}</h2>
+        </div>
+    `;
+};
+
+// מאזין ללחיצה על כפתור החיפוש
+document.getElementById('search-button').addEventListener('click', searchCity);
