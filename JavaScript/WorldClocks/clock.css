@@ -97,28 +97,28 @@
 }
 
 .israel {
-    background-image: url('/JavaScript/imag/Idan.jpg '); 
+    background-image: url('../imag/Idan.jpg'); 
     background-size: cover; 
     background-position: center;
     opacity: 0.7;  
 }
 
 .ethiopia {
-    background-image: url('/JavaScript/imag/ethiopia\ kids.jpg'); 
+    background-image: url('../imag/ethiopia\ kids.jpg'); 
     background-size: cover ; 
     background-position: center; 
     opacity: 0.7;  
 }
 
 .brazil {
-    background-image: url('/JavaScript/imag/etinia-paresi-fonte-governo-do-mato-grosso-brazil.jpeg'); 
+    background-image: url('../imag/etinia-paresi-fonte-governo-do-mato-grosso-brazil.jpeg'); 
     background-size: cover; 
     background-position: center;
     opacity: 0.7;  
 }
 
 .jamaica {
-    background-image: url('/JavaScript/imag/istockphoto-926200302-612x612.jpg');
+    background-image: url('../imag/istockphoto-926200302-612x612.jpg');
     background-size: cover; 
     background-position: center; 
     opacity: 0.7; 

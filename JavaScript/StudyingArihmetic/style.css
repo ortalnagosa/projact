@@ -6,7 +6,7 @@ body {
   background: linear-gradient(to bottom, #a8e6cf, #dcedc1);
   text-align: center;
   color: #333;
-  background-image: url("/JavaScript/imag/num.jpg");
+  background-image: url("../imag/num.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -176,7 +176,7 @@ p {
 
 @media (max-width: 768px) {
   body {
-    background-image: url("/JavaScript/imag/num.jpg");
+    background-image: url("../imag/num.jpg");
     height: 100vh;
   }
   h1 {
@@ -206,7 +206,7 @@ p {
 
 @media (max-width: 480px) {
   body {
-    background-image: url("/JavaScript/imag/num.jpg");
+    background-image: url("../imag/num.jpg");
     height: 100vh;
   }
   h1 {
